@@ -1,15 +1,29 @@
 import pageLoad from "./pageload";
+import homeLoad from "./home";
+import menuLoad from "./menu";
+import aboutLoad from "./about";
 import "./style.css";
 pageLoad();
 let navbar = document.querySelector(".header")
-let main = document.querySelector(".content");
+let currentPage = "home";
 
 let btns = document.querySelectorAll(".btn");
-console.log(btns);
+
 
 btns.forEach(btn => {
     btn.addEventListener("click", (e) => {
-        console.log(e.target);
+        let current = e.target.getAttribute("data-page");
+        currentPage = current;
+        if (current === "home") {
+            homeLoad();
+            
+        }
+        else if (current === "menu") {
+            menuLoad();
+        }
+        else if (current === "about") {
+            aboutLoad();
+        }
     })
 });
 
