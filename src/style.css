@@ -64,10 +64,21 @@ div > .main {
     height: 70vh;
     margin: auto;
     width: 60vw;
-    padding-top: 20vh;
     justify-content: center;
     word-wrap: break-all;
     white-space: normal;
+}
+
+div > .home {
+    padding-top: 10vh;
+}
+
+div > .menu > div {
+    border-bottom: 5px solid black;    
+}
+
+.menu-img {
+    max-height: 150px;
 }
 
 .footer {

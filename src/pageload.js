@@ -1,4 +1,5 @@
 import logo from "../assets/logo.png";
+import homeLoad from "./home";
 const body = document.getElementById("content");
 
 function headerLoad() {
@@ -43,12 +44,8 @@ function contentLoad() {
     console.log("home page");
     let content = document.createElement("div");
     content.classList.add("main");
-    let changable = document.createElement("para");
-    changable.classList.add("change");
-    changable.textContent = "Here is the best restaurant in the universe. It will really change your perspective on life. Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quam consequuntur architecto dolores veniam atque.";
-    
-    content.appendChild(changable);
     body.appendChild(content);
+    homeLoad();
 }
 
 function footerLoad() {
